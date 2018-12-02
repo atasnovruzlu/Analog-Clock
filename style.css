@@ -4,30 +4,49 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: coral;
-    padding-top: 30px;
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding-top: 60px;
 
 }
 
 .container {
     width: 400px;
     height: 400px;
+    border-radius: 50%;
     margin: auto auto;
-    background-color: brown;
+    background: #808080;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3fada8, #808080);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #3fada8, #808080);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .clock {
-    background-image: url(ios_clock.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
+
+    
+    
     width: 350px;
     height: 350px;
-    border-radius: 50%;
-    background-color: aliceblue;
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FD746C, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FD746C, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(ios_clock.svg);
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
 
 }
 
@@ -42,28 +61,32 @@ body {
     transform: translateX(-50%) translateY(-50%);
     border-radius: 50%;
 }
-#hourC{
+
+#hourC {
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform-origin:50% 100%;
+    transform-origin: 50% 100%;
 }
-#minuteC{
+
+#minuteC {
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform-origin:50% 100%;
+    transform-origin: 50% 100%;
 }
-#secondC{
+
+#secondC {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform-origin:50% 3%;
+    transform-origin: 50% 3%;
 }
+
 .lines {
     position: absolute;
-    
-    transform-origin:top;
 
-    
+    transform-origin: top;
+
+
 }
