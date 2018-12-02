@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="clock">
+
+            <div id="hourC" class="lines"  style="border-radius: 5px; width:7px;height:90px;background-color:rgb(17, 12, 12)"></div>
+            <div id="minuteC" class="lines"  style=" border-radius: 5px;width:3px;height:130px;background-color:rgb(12, 10, 10)"></div>
+            <div id="secondC" class="lines"  style="border-radius: 5px;width:1px;height:140px;background-color:rgb(8, 1, 1)"></div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+
+    var hourC = document.getElementById("hourC");
+    var minuteC = document.getElementById("minuteC");
+    var secondC = document.getElementById("secondC");
+   
+   function showClock(){
+  
+  var date = new Date();
+  var hour = date.getHours() % 12;
+  var minute = date.getMinutes();
+  var second = date.getSeconds();
+ 
+ var hourDeg = (hour * 30) + (minute * 0.5) ;
+ var minuteDeg = (minute * 6) + (0.1 * minute);
+ var secondDeg = second * 6;
+
+   hourC.style.transform = 'rotate(' + hourDeg + 'deg)';
+   minuteC.style.transform = 'rotate(' + minuteDeg + 'deg)';
+   secondC.style.transform = 'rotate(' + secondDeg + 'deg)';
+
+setTimeout(showClock, 1000);
+
+   };
+   
+showClock();
+
+    
+    
+    
+    </script>
+
+    <!-- <p id="demo"></p> -->
+
+    <!-- <script>
+        
+        var d = new Date();
+
+        var a = d.getFullYear() + "," + d.getMonth();
+        var t = d.getDay();
+    
+        
+        var z = new Date(1997,11,12,0,0,0,0);
+        var s=z.getFullYear() + "," + z.getMonth();
+var k = z.getDay();
+        
+        document.getElementById("demo").innerHTML = d.getFullYear() - z.getFullYear() + " il "  +  Math.abs(d.getMonth() - z.getMonth()) + " ay" +  Math.abs(t - k) + " gun";
+        if((d.getMonth() - z.getMonth())<0){
+
+        }
+console.log(d.getMonth());
+console.log(z.getMonth());
+    </script> -->
+
+
+
+
+</body>
+
+</html>

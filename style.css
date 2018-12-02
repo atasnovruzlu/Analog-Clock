@@ -1,0 +1,69 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: coral;
+    padding-top: 30px;
+
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: auto auto;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    background-image: url(ios_clock.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: relative;
+
+}
+
+.clock::after {
+    position: absolute;
+    content: ' ';
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+}
+#hourC{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform-origin:50% 100%;
+}
+#minuteC{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform-origin:50% 100%;
+}
+#secondC{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin:50% 3%;
+}
+.lines {
+    position: absolute;
+    
+    transform-origin:top;
+
+    
+}
